@@ -1,0 +1,39 @@
+{
+  "name": "node-react-template",
+  "version": "0.0.1",
+  "description": "A simple boilerplate to get started with a nodejs static file server.",
+  "private": false,
+  "scripts": {
+    "startdev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "start": "nodemon src-server/app.js --exec babel-node",
+    "build": "babel src-server -d dist-server",
+    "serve": "node dist-server/app.js"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "body-parser": "^1.15.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "express-status-monitor": "^0.1.5",
+    "express-validator": "^3.1.2",
+    "lodash": "^3.10.1",
+    "morgan": "^1.7.0",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-promise": "^1.1.3",
+    "react-redux": "4.3.0",
+    "react-router": "^2.0.1",
+    "redux": "^3.0.4",
+    "redux-promise": "^0.5.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
