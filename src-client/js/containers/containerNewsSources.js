@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionGetNewsSources } from '../actions/index';
+import NewsSourceComponent from '../components/newsSource';
+import { BrowserRouter } from 'react-router-dom';
 
 class ContainerNewsSources extends Component {
   constructor(props) {
@@ -15,10 +17,7 @@ class ContainerNewsSources extends Component {
   renderSources() {
     return this.props.newsSources.map((source) => {
       return (
-        <ul>
-         <li>{source.name}</li>
-         <li>{source.description}</li>
-        </ul>
+        <NewsSourceComponent source={source} key={source.name} />
       )
     })
   }
