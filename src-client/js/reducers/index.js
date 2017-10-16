@@ -1,12 +1,8 @@
 import { combineReducers } from 'redux';
-import { reducerGeneric } from './reducerGeneric';
-import { reducerGetNewsSources } from './reducerGetNewsSources';
-import { reducerGetHeadlines } from './reducerGetHeadlines';
+import { reducerGetExample } from './reducerGetExample';
 
 const rootReducer = combineReducers({
-  generic: reducerGeneric,
-  newsSources: reducerGetNewsSources,
-  headlines: reducerGetHeadlines
+  exampleData: reducerGetExample
 });
 
 export default rootReducer;

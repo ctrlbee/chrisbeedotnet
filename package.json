@@ -1,13 +1,12 @@
 {
-  "name": "node-react-template",
-  "version": "0.0.1",
-  "description": "A simple boilerplate to get started with a nodejs static file server.",
+  "name": "node-react-redux-boilerplate",
+  "version": "0.5.0",
+  "description": "A simple boilerplate to get started with a node/react/redux app.",
   "private": false,
   "scripts": {
-    "startdev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "webpack": "webpack",
-    "start": "nodemon src-server/app.js --exec babel-node",
-    "build": "babel src-server -d dist-server",
+    "webpackdev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "startdev": "webpack --watch & nodemon src-server/app.js --exec babel-node",
+    "build": "webpack & babel src-server -d dist-server",
     "serve": "node dist-server/app.js"
   },
   "dependencies": {
@@ -21,7 +20,6 @@
     "lodash": "^3.10.1",
     "morgan": "^1.7.0",
     "react": "^15.4.0",
-    "react-bootstrap": "^0.31.2",
     "react-dom": "^15.4.3",
     "react-promise": "^1.1.3",
     "react-redux": "5.0.0",

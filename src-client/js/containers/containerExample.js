@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { actionGetNewsSources } from '../actions/index';
-import NewsSourceComponent from '../components/newsSource';
+import { actionGetExample } from '../actions/index';
+import ExampleComponent from '../components/componentExample';
 import { BrowserRouter } from 'react-router-dom';
 
 class ContainerNewsSources extends Component {
@@ -11,13 +11,13 @@ class ContainerNewsSources extends Component {
   }
 
   componentDidMount() {
-    this.props.getNewsSources();
+    this.props.getExampleData();
   }
 
   renderSources() {
     return this.props.newsSources.map((source) => {
       return (
-        <NewsSourceComponent source={source} key={source.name} />
+        <ExampleComponent source={source} key={source.name} />
       )
     })
   }
@@ -25,6 +25,7 @@ class ContainerNewsSources extends Component {
   render() {
     return (
       <div>
+          <h2>The News Sources</h2>
           {this.renderSources()}
       </div>
     )
@@ -32,12 +33,12 @@ class ContainerNewsSources extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({getNewsSources: actionGetNewsSources}, dispatch)
+  return bindActionCreators({getExampleData: actionGetExample}, dispatch)
 }
 
 function mapStateToProps(state) {
   return {
-    newsSources: state.newsSources
+    newsSources: state.exampleData
   }
 }
 

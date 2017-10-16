@@ -1,6 +1,6 @@
-export function reducerGetNewsSources(state=[], action) {
+export function reducerGetExample(state=[], action) {
   switch(action.type) {
-    case 'ACTION_GETNEWSSOURCES':
+    case 'ACTION_GETEXAMPLE':
       return action.payload.data.sources
     default:
       return state

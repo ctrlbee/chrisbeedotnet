@@ -1,6 +1,8 @@
-News App
+Node-React-Redux Boilerplate App
 -------------
 
-APIs used: 
-https://newsapi.org/#documentation
+To start locally: 
+npm install
+npm run startdev
+app will be running on http://localhost:8080/
 
