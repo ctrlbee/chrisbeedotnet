@@ -5,7 +5,9 @@ import { createStore, applyMiddleware } from 'redux';
 import ReduxPromise from 'redux-promise';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import ContainerExample from './containers/containerExample';
+import SemanticDemo from './containers/semanticDemo';
 import reducers from './reducers';
+import App from './containers/app';
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
@@ -14,12 +16,7 @@ ReactDOM.render(
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
     )}>
     <BrowserRouter>
-      <div>
-      <Link to='/example'>Example Redux Cycle</Link>
-        <Switch>
-          <Route path='/example' component={ContainerExample} />
-        </Switch>
-      </div>
+      <App />
     </BrowserRouter>
   </Provider>
   , document.querySelector('.container'));
